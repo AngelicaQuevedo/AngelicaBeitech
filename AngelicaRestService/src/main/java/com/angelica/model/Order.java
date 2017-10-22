@@ -19,7 +19,7 @@ public class Order {
     private String deliveryAddress;
     
     @Column(name = "customer_id")
-    Customer customer;
+    Integer customerId;
 
     @Column(name = "delivery_date")
     private Date deliveryDate;
@@ -40,12 +40,12 @@ public class Order {
 		this.deliveryAddress = deliveryAddress;
 	}
 
-	public Customer getCustomer() {
-		return customer;
+	public Integer getCustomer() {
+		return customerId;
 	}
 
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
+	public void setCustomer(Integer customerId) {
+		this.customerId = customerId;
 	}
 
 	public Date getDeliveryDate() {
@@ -58,7 +58,7 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "Order [orderId=" + orderId + ", deliveryAddress=" + deliveryAddress + ", customer=" + customer
+		return "Order [orderId=" + orderId + ", deliveryAddress=" + deliveryAddress + ", customer=" + customerId
 				+ ", deliveryDate=" + deliveryDate + "]";
 	}
     

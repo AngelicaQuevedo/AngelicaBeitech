@@ -13,7 +13,7 @@ public class Customer{
 
     @Id
     @Column(name = "CUSTOMER_ID")
-	private Integer customerId;
+	private Long customerId;
 
     @Column(name = "NAME")
     private String name;
@@ -21,13 +21,11 @@ public class Customer{
     @Column(name = "EMAIL")
     private String email;
     
-    private List<Order> orders;
-
-	public Integer getCustomerId() {
+	public Long getCustomerId() {
 		return customerId;
 	}
 
-	public void setCustomerId(Integer customerId) {
+	public void setCustomerId(Long customerId) {
 		this.customerId = customerId;
 	}
 
@@ -47,19 +45,11 @@ public class Customer{
 		this.email = email;
 	}
 
-	public List<Order> getOrders() {
-		return orders;
-	}
-
-	public void setOrders(List<Order> orders) {
-		this.orders = orders;
-	}
-
 	@Override
 	public String toString() {
-		return "Customer [customerId=" + customerId + ", name=" + name + ", email=" + email + ", orders=" + orders
-				+ "]";
+		return "Customer [customerId=" + customerId + ", name=" + name + ", email=" + email + "]";
 	}
+
 	
 
 }

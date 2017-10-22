@@ -14,7 +14,7 @@ public class ProductDaoImpl extends AbstractDao<Integer, Product> implements Pro
 
 	@Override
 	public List<Product> getAllowedProductsByCustomer(Integer customerId) {
-		Query query = getSession().createSQLQuery("select from AllowedProductCustomer where customerId = :customerId");
+		Query query = getSession().createSQLQuery("select product from AllowedProductCustomer where customerId = :customerId");
 		query.setInteger("customerId", customerId);
 		
 		return null;

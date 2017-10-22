@@ -15,13 +15,5 @@ public class OrderDetail {
     @Column(name = "detail_id")
 	private Integer detailId;
 
-    @Column(name = "order_id")
-    private Order order;
-    
-    @Column(name = "customer_id")
-    Customer customer;
-
-    @Column(name = "delivery_date")
-    private Date deliveryDate;
 
 }
