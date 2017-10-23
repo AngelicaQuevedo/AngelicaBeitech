@@ -1,6 +1,7 @@
 package com.angelica.webservice.restapi;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.angelica.model.Customer;
+import com.angelica.model.Product;
 import com.angelica.webservice.restapi.common.BaseResponse;
 
 @RestController
@@ -42,7 +44,9 @@ public class OrderRestController {
     
     class AddOrderRequest{
     	public Integer customerId;
-    	
+    	public String deliveryAddress;
+    	public Date deliveryDate;
+    	public List<Product> products;
     }
     
     class OrdersByCustomerRequest{
