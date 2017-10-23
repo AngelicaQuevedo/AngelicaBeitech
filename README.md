@@ -12,6 +12,6 @@ BACKEND:
 
 Los servicios disponibles para invocar son:
 
-{host}/webapp/API/GetCustomers
-{host}/webapp/API/GetAllowedProductsByCustomer/{id}
-{host}/webapp/API/AddOrder/{id}
+- {host}/webapp/API/GetCustomers
+- {host}/webapp/API/GetAllowedProductsByCustomer/{id}
+- {host}/webapp/API/AddOrder/{id}
