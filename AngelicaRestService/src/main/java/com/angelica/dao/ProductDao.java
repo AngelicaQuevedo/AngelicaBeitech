@@ -6,6 +6,6 @@ import com.angelica.model.Product;
 
 public interface ProductDao {
 	
-	List<Product> getAllowedProductsByCustomer(Integer customerId);
+	List<Product> getAllowedProductsByCustomer(Long customerId);
 
 }

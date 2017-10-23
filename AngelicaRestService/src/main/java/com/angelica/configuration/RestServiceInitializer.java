@@ -1,5 +1,7 @@
 package com.angelica.configuration;
 
+import javax.servlet.Filter;
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class RestServiceInitializer extends AbstractAnnotationConfigDispatcherServletInitializer{
@@ -17,5 +19,11 @@ public class RestServiceInitializer extends AbstractAnnotationConfigDispatcherSe
     @Override
     protected String[] getServletMappings() {
         return new String[] { "/API/*" };
+    }
+    
+    @Override
+    protected Filter[] getServletFilters() {
+        Filter [] singleton = { new CORSFilter() };
+        return singleton;
     }
 }
