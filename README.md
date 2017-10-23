@@ -9,3 +9,9 @@ BACKEND:
 3. Compilar el proyecto utilizando los goals "clean install" de Maven.
 4. Dentro de la carpeta "target" se genera un archivo .war llamado "webapp.war", colocarlo dentro de la carpeta "deployments" del standalone en wildfly.
 5. Iniciar el servidor wildfly.
+
+Los servicios disponibles para invocar son:
+
+{host}/webapp/API/GetCustomers
+{host}/webapp/API/GetAllowedProductsByCustomer/{id}
+{host}/webapp/API/AddOrder/{id}
