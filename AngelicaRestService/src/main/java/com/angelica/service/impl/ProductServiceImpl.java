@@ -1,6 +1,5 @@
 package com.angelica.service.impl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,14 +12,14 @@ import com.angelica.service.ProductService;
 
 @Service("productService")
 @Transactional
-public class ProductServiceImpl implements ProductService{
-	
-	@Autowired
-	ProductDao productDao;
+public class ProductServiceImpl implements ProductService {
 
-	@Override
-	public List<Product> getAllowedProductsByCustomer(Long customerId) {
-		return productDao.getAllowedProductsByCustomer(customerId);
-	}
+    @Autowired
+    ProductDao productDao;
+
+    @Override
+    public List<Product> getAllowedProductsByCustomer(Long customerId) {
+        return productDao.getAllowedProductsByCustomer(customerId);
+    }
 
 }
