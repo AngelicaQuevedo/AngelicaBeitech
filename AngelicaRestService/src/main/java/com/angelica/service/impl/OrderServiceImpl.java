@@ -44,7 +44,7 @@ public class OrderServiceImpl implements OrderService {
         order.setTotal(5000F);
         order.setOrderDetails(orderDetails);
 
-        orderDao.addNewCustomerOrder(order);
+        // orderDao.addNewCustomerOrder(order);
 
     }
 
