@@ -1,9 +1,13 @@
 package com.angelica.dao;
 
+import java.util.List;
+
 import com.angelica.model.Order;
 
 public interface OrderDao {
 
-    public void addNewCustomerOrder(Order order);
+    public void addNewOrder(Order order);
+    
+    List<Order> getOrdersByCustomer(Long customerId);
 
 }

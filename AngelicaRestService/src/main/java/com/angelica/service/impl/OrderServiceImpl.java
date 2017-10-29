@@ -1,7 +1,8 @@
 package com.angelica.service.impl;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,13 +23,15 @@ public class OrderServiceImpl implements OrderService {
     OrderDao orderDao;
 
     @Override
-    public void generateProductsOrder(Long customerId, String deliveryAddress, List<ProductDetail> productsToOrder) {
+    public Date generateProductsOrder(Long customerId, String deliveryAddress, List<ProductDetail> productsToOrder) {
 
         Order order = new Order();
+        Float orderTotal = 0F;
         List<OrderDetail> orderDetails = new ArrayList<>();
         OrderDetail orderDetailItem;
 
         for (ProductDetail productDetail : productsToOrder) {
+        	orderTotal = orderTotal + productDetail.getProductPrice();
             orderDetailItem = new OrderDetail();
             orderDetailItem.setOrder(order);
             orderDetailItem.setProductId(productDetail.getProductId());
@@ -36,16 +39,31 @@ public class OrderServiceImpl implements OrderService {
             orderDetailItem.setDetailDescription(productDetail.getDescription());
             orderDetails.add(orderDetailItem);
         }
-
-        order.setCreationDate(LocalDate.now());
+        
+        
+        Date currentDate = new Date();
+        
+        order.setCreationDate(currentDate);
         order.setCustomerId(customerId);
         order.setDeliveryAddress(deliveryAddress);
-        order.setDeliveryDate(LocalDate.now().plusDays(5L));
-        order.setTotal(5000F);
+        
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(currentDate);
+        calendar.add(Calendar.DATE, 5);
+        Date deliveryDate = calendar.getTime();
+        
+        order.setDeliveryDate(deliveryDate);
+        order.setTotal(orderTotal);
         order.setOrderDetails(orderDetails);
+        
+        orderDao.addNewOrder(order);
+        
+        return deliveryDate;
 
-        // orderDao.addNewCustomerOrder(order);
-
+    }
+    
+    public List<Order> getOrdersByCustomer(Long customerId){
+    	return orderDao.getOrdersByCustomer(customerId);
     }
 
 }

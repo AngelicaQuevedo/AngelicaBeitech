@@ -1,5 +1,6 @@
 package com.angelica.webservice.restapi;
 
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -10,40 +11,63 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.angelica.model.Order;
 import com.angelica.service.OrderService;
 import com.angelica.webservice.restapi.common.BaseResponse;
 import com.angelica.webservice.restapi.wrapper.AddOrderRequestWrapper;
-import com.angelica.webservice.restapi.wrapper.ProductDetail;
 
 @RestController
 public class OrderRestController {
 
-    @Autowired
-    OrderService orderService;
+	@Autowired
+	OrderService orderService;
 
-    @RequestMapping(value = "/AddOrder/{id}", method = RequestMethod.POST)
-    public AddOrderResponse addOrder(@RequestBody AddOrderRequestWrapper orderReq, @PathVariable("id") Long customerId) {
-        AddOrderResponse response = new AddOrderResponse();
-        try {
+	@RequestMapping(value = "/AddOrder/{id}", method = RequestMethod.POST)
+	public AddOrderResponse addOrder(@RequestBody AddOrderRequestWrapper orderReq, @PathVariable("id") Long customerId) {
+		AddOrderResponse response = new AddOrderResponse();
+		try {
 
-            List<ProductDetail> productsDetail = orderReq.getProductsToOrder().stream().collect(Collectors.toList());
-            orderService.generateProductsOrder(customerId, orderReq.getDeliveryAddress(), productsDetail);
+			Date deliveryDate = orderService.generateProductsOrder(customerId, orderReq.getDeliveryAddress(),
+					orderReq.getProductsToOrder().stream().collect(Collectors.toList()));
 
-            response.returnCode = 0;
-            response.returnMessage = "success";
-            response.addOrderMessage = "order added for customer " + customerId;
-        } catch (Exception e) {
-            e.getMessage();
-            response.returnCode = 1;
-            response.returnMessage = "Exception during adding the order";
-            response.addOrderMessage = "no order generated for customer " + customerId;
-        }
-        return response;
-    }
+			response.returnCode = 0;
+			response.returnMessage = "success";
+			response.addOrderMessage = "a new order has been added for customer " + customerId;
+			response.deliveryDate = "" + deliveryDate;
+		} catch (Exception e) {
+			e.getMessage();
+			response.returnCode = 1;
+			response.returnMessage = "Exception during adding the order";
+			response.addOrderMessage = "no order was generated for customer " + customerId;
+		}
+		return response;
+	}
+	
+	@RequestMapping(value = "/GetOrdersByCustomer/{id}", method = RequestMethod.GET)
+	public GetOrderResponse getOrdersByCustomer(@PathVariable("id") Long customerId){
+		GetOrderResponse response = new GetOrderResponse();
+		try{
+			response.returnCode = 0;
+			response.returnMessage = "orders for customer " + customerId + " have been retrieved successfully";
+			response.customerId = customerId;
+			response.orders = orderService.getOrdersByCustomer(customerId);
+			
+		}catch(Exception e){
+			response.returnCode = 1;
+			response.returnMessage = "Exception getting orders for customer " + customerId;
+		}
+		return response;
+	}
 
-    class AddOrderResponse extends BaseResponse {
-        public String addOrderMessage;
-    }
+	class AddOrderResponse extends BaseResponse {
+		public String addOrderMessage;
+		public String deliveryDate;
+	}
+	
+	class GetOrderResponse extends BaseResponse{
+		public Long customerId;
+		public List<Order> orders;
+	}
 
 
 }

@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 @Table(name = "ORDER_DETAIL")
 public class OrderDetail {
@@ -22,6 +24,7 @@ public class OrderDetail {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "order_id")
+    @JsonManagedReference
     private Order order;
 
     @Column(name = "product_id")
@@ -72,6 +75,12 @@ public class OrderDetail {
     public void setDetailDescription(String detailDescription) {
         this.detailDescription = detailDescription;
     }
+
+	@Override
+	public String toString() {
+		return "OrderDetail [detailId=" + detailId + ", productId=" + productId + ", price="
+				+ price + ", detailDescription=" + detailDescription + "]";
+	}
 
 
 

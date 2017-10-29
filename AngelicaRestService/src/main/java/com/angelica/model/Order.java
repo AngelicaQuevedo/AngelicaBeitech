@@ -2,6 +2,8 @@ package com.angelica.model;
 
 import java.math.BigInteger;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -13,8 +15,12 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.joda.time.DateTime;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
-@Table(name = "ORDER")
+@Table(name = "ORDERS")
 public class Order {
 
     @Id
@@ -23,7 +29,7 @@ public class Order {
     private BigInteger orderId;
 
     @Column(name = "creation_date")
-    private LocalDate creationDate;
+    private Date creationDate;
 
     @Column(name = "customer_id")
     private Long customerId;
@@ -31,13 +37,14 @@ public class Order {
     @Column(name = "delivery_address")
     private String deliveryAddress;
 
-    @Column(name = "delivery_date")
-    private LocalDate deliveryDate;
+    @Column(name = "delivery_date", columnDefinition = "DATETIME(3)")
+    private Date deliveryDate;
 
     @Column(name = "total")
     private Float total;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    @JsonBackReference
     private List<OrderDetail> orderDetails;
 
     public BigInteger getOrderId() {
@@ -48,11 +55,11 @@ public class Order {
         this.orderId = orderId;
     }
 
-    public LocalDate getCreationDate() {
+    public Date getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(LocalDate creationDate) {
+    public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
     }
 
@@ -72,11 +79,11 @@ public class Order {
         this.deliveryAddress = deliveryAddress;
     }
 
-    public LocalDate getDeliveryDate() {
+    public Date getDeliveryDate() {
         return deliveryDate;
     }
 
-    public void setDeliveryDate(LocalDate deliveryDate) {
+    public void setDeliveryDate(Date deliveryDate) {
         this.deliveryDate = deliveryDate;
     }
 
@@ -89,12 +96,13 @@ public class Order {
     }
 
     @Override
-    public String toString() {
-        return "Order [orderId=" + orderId + ", creationDate=" + creationDate + ", customerId=" + customerId + ", deliveryAddress=" + deliveryAddress + ", deliveryDate=" + deliveryDate + ", total="
-                + total + ", orderDetails=" + orderDetails.get(0).getDetailDescription() + "]";
-    }
+	public String toString() {
+		return "Order [orderId=" + orderId + ", creationDate=" + creationDate + ", customerId=" + customerId
+				+ ", deliveryAddress=" + deliveryAddress + ", deliveryDate=" + deliveryDate + ", total=" + total
+				+ ", orderDetails=" + orderDetails + "]";
+	}
 
-    public List<OrderDetail> getOrderDetails() {
+	public List<OrderDetail> getOrderDetails() {
         return orderDetails;
     }
 
