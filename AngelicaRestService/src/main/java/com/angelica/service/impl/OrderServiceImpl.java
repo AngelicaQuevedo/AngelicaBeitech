@@ -63,7 +63,11 @@ public class OrderServiceImpl implements OrderService {
     }
     
     public List<Order> getOrdersByCustomer(Long customerId){
-    	return orderDao.getOrdersByCustomer(customerId);
+    	List<Order> orders = orderDao.getOrdersByCustomer(customerId);
+    	for (Order order : orders) {
+			System.out.println(order);
+		}
+    	return orders;
     }
 
 }

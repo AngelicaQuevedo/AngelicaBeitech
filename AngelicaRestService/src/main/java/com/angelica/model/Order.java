@@ -1,8 +1,6 @@
 package com.angelica.model;
 
 import java.math.BigInteger;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -15,9 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.joda.time.DateTime;
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name = "ORDERS")
@@ -29,6 +25,7 @@ public class Order {
     private BigInteger orderId;
 
     @Column(name = "creation_date")
+    @JsonFormat(pattern="yyyy-MM-dd")
     private Date creationDate;
 
     @Column(name = "customer_id")
@@ -38,13 +35,13 @@ public class Order {
     private String deliveryAddress;
 
     @Column(name = "delivery_date", columnDefinition = "DATETIME(3)")
+    @JsonFormat(pattern="yyyy-MM-dd")
     private Date deliveryDate;
 
     @Column(name = "total")
     private Float total;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    @JsonBackReference
     private List<OrderDetail> orderDetails;
 
     public BigInteger getOrderId() {

@@ -11,7 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "ORDER_DETAIL")
@@ -24,7 +24,7 @@ public class OrderDetail {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "order_id")
-    @JsonManagedReference
+    @JsonIgnore
     private Order order;
 
     @Column(name = "product_id")
