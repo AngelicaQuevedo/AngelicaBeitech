@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: pruebasbeitechorden
 -- ------------------------------------------------------
--- Server version	5.6.37-log
+-- Server version	5.6.38-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -29,7 +29,8 @@ CREATE TABLE `allowed_product_customer` (
   PRIMARY KEY (`product_customer_id`),
   KEY `fk_producto` (`product_id`),
   KEY `fk_customer` (`customer_id`),
-  CONSTRAINT `fx_customer` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fx_customer` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fx_product` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -63,7 +64,7 @@ CREATE TABLE `category` (
 
 LOCK TABLES `category` WRITE;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
-INSERT INTO `category` VALUES (1,'Carnes'),(2,'Lacteos'),(3,'Ropa'),(4,'Mercado'),(5,'ElectrodomÃ©sticos'),(6,'TecnologÃ­a');
+INSERT INTO `category` VALUES (1,'Carnes'),(2,'Lacteos'),(3,'Ropa'),(4,'Mercado'),(5,'ElectrodomÃƒÂ©sticos'),(6,'TecnologÃƒÂ­a');
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -111,7 +112,7 @@ CREATE TABLE `order_detail` (
   KEY `fx_product_detail1_idx` (`product_id`),
   CONSTRAINT `order_detail_order` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `order_detail_product` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -120,7 +121,6 @@ CREATE TABLE `order_detail` (
 
 LOCK TABLES `order_detail` WRITE;
 /*!40000 ALTER TABLE `order_detail` DISABLE KEYS */;
-INSERT INTO `order_detail` VALUES (1,1,1,20,'description order 1'),(2,1,2,16,'description 2 order 1'),(3,2,8,35,'camisa mujer'),(4,2,10,55,'pantalon mujer');
 /*!40000 ALTER TABLE `order_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -133,7 +133,7 @@ DROP TABLE IF EXISTS `orders`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `orders` (
   `order_id` bigint(45) NOT NULL AUTO_INCREMENT,
-  `customer_id` bigint(45) NOT NULL,
+  `customer_id` bigint(45) DEFAULT NULL,
   `delivery_address` varchar(250) DEFAULT NULL,
   `delivery_date` date DEFAULT NULL,
   `creation_date` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
@@ -141,7 +141,7 @@ CREATE TABLE `orders` (
   PRIMARY KEY (`order_id`),
   KEY `k_orden_custumer1_idx_idx` (`customer_id`),
   CONSTRAINT `fx_customer_order` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -150,7 +150,6 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (1,1019085669,'calle falsa 123','2017-10-26','2017-10-23 12:22:10',3500),(2,1019085669,'calle falsa 123','2017-10-27','2017-10-24 13:01:57',70);
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -193,4 +192,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-23 16:31:14
+-- Dump completed on 2017-10-30 21:42:44
