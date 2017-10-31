@@ -16,8 +16,10 @@ public class OrderDaoImpl extends AbstractDao<Integer, Order> implements OrderDa
         persist(order);
     }
     
-    public List<Order> getOrdersByCustomer(Long customerId){
-    	List<Order> orders = (List<Order>) getSession().createQuery(" from Order where customerId = :customerId").setLong("customerId", customerId).list();
+    @SuppressWarnings("unchecked")
+	public List<Order> getOrdersByCustomer(Long customerId, String today, String daysBefore){
+    	List<Order> orders = (List<Order>) getSession().createQuery(" from Order where creationDate BETWEEN :startDate AND :endDate and customerId = :customerId")
+    			.setString("startDate", daysBefore).setString("endDate", today).setLong("customerId", customerId).list();
     	return orders;
     }
 

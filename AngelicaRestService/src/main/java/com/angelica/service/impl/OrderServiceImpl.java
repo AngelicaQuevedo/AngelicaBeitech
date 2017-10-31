@@ -1,5 +1,6 @@
 package com.angelica.service.impl;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -40,7 +41,6 @@ public class OrderServiceImpl implements OrderService {
             orderDetails.add(orderDetailItem);
         }
         
-        
         Date currentDate = new Date();
         
         order.setCreationDate(currentDate);
@@ -57,13 +57,19 @@ public class OrderServiceImpl implements OrderService {
         order.setOrderDetails(orderDetails);
         
         orderDao.addNewOrder(order);
-        
         return deliveryDate;
-
     }
     
     public List<Order> getOrdersByCustomer(Long customerId){
-    	List<Order> orders = orderDao.getOrdersByCustomer(customerId);
+    	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    	String today = sdf.format(new Date());
+    	
+    	Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        calendar.add(Calendar.DATE, -30);
+        String daysBefore = sdf.format(calendar.getTime());
+        
+    	List<Order> orders = orderDao.getOrdersByCustomer(customerId, today, daysBefore);
     	for (Order order : orders) {
 			System.out.println(order);
 		}

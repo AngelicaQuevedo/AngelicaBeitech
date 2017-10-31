@@ -8,6 +8,6 @@ public interface OrderDao {
 
     public void addNewOrder(Order order);
     
-    List<Order> getOrdersByCustomer(Long customerId);
+    List<Order> getOrdersByCustomer(Long customerId, String today, String daysBefore);
 
 }
