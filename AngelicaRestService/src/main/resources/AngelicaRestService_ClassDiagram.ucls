@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.1" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="com.angelica.configuration.RestServiceInitializer" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/configuration/RestServiceInitializer.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="201" x="1658" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="com.angelica.configuration.CORSFilter" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/configuration/CORSFilter.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="305" x="1069" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.angelica.configuration.HibernateConfiguration" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/configuration/HibernateConfiguration.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="354" x="251" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.angelica.configuration.RestServiceConfiguration" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/configuration/RestServiceConfiguration.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="169" x="42" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" language="java" name="com.angelica.dao.CustomerDao" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/dao/CustomerDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="201" x="2577" y="729"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="6" language="java" name="com.angelica.dao.ProductDao" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/dao/ProductDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="284" x="3817" y="729"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="7" language="java" name="com.angelica.dao.OrderDao" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/dao/OrderDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="288" x="2818" y="729"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="8" language="java" name="com.angelica.dao.AbstractDao" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/dao/AbstractDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="183" x="2185" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="com.angelica.dao.impl.OrderDaoImpl" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/dao/impl/OrderDaoImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="288" x="2185" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="com.angelica.dao.impl.ProductDaoImpl" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/dao/impl/ProductDaoImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="284" x="2513" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="com.angelica.dao.impl.CustomerDaoImpl" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/dao/impl/CustomerDaoImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="201" x="1944" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="com.angelica.exceptions.NoProductException" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/exceptions/NoProductException.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="159" x="645" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="com.angelica.model.Customer" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/model/Customer.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="181" x="3146" y="1228"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="com.angelica.model.Order" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/model/Order.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="459" width="215" x="1021" y="729"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="com.angelica.model.OrderDetail" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/model/OrderDetail.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="351" width="180" x="1021" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="com.angelica.model.Product" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/model/Product.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="405" width="172" x="3146" y="729"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="17" language="java" name="com.angelica.service.CustomerService" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/service/CustomerService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="197" x="1363" y="729"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="18" language="java" name="com.angelica.service.ProductService" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/service/ProductService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="284" x="3857" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="19" language="java" name="com.angelica.service.OrderService" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/service/OrderService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="323" x="2858" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="20" language="java" name="com.angelica.service.impl.ProductServiceImpl" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/service/impl/ProductServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="284" x="3817" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="com.angelica.service.impl.OrderServiceImpl" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/service/impl/OrderServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="323" x="2818" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="com.angelica.service.impl.CustomerServiceImpl" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/service/impl/CustomerServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="197" x="1486" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="com.angelica.util.HibernateUtil" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/util/HibernateUtil.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="204" x="1414" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="com.angelica.webservice.restapi.OrderRestController" 
+    project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/webservice/restapi/OrderRestController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="336" x="3202" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="com.angelica.webservice.restapi.ProductRestController.AllowedProductsRequest" 
+    project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/webservice/restapi/ProductRestController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="168" x="4181" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="com.angelica.webservice.restapi.CustomerRestController.CustomersResponse" 
+    project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/webservice/restapi/CustomerRestController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="146" x="2391" y="729"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="com.angelica.webservice.restapi.CustomerRestController" 
+    project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/webservice/restapi/CustomerRestController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="205" x="1241" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="com.angelica.webservice.restapi.ProductRestController" 
+    project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/webservice/restapi/ProductRestController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="350" x="4141" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="com.angelica.webservice.restapi.OrderRestController.GetOrderResponse" 
+    project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/webservice/restapi/OrderRestController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="146" x="3221" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="com.angelica.webservice.restapi.ProductRestController.AllowedProductsResponse" 
+    project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/webservice/restapi/ProductRestController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="178" x="3618" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="com.angelica.webservice.restapi.OrderRestController.AddOrderResponse" 
+    project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/webservice/restapi/OrderRestController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="150" x="3407" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="com.angelica.webservice.restapi.common.BaseResponse" 
+    project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/webservice/restapi/common/BaseResponse.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="261" width="185" x="3578" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="com.angelica.webservice.restapi.common.BaseRequest" project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/webservice/restapi/common/BaseRequest.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="185" x="844" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="com.angelica.webservice.restapi.wrapper.AddOrderRequestWrapper" 
+    project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/webservice/restapi/wrapper/AddOrderRequestWrapper.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="246" x="1899" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="com.angelica.webservice.restapi.wrapper.ProductDetail" 
+    project="AngelicaRestService" 
+    file="/AngelicaRestService/src/main/java/com/angelica/webservice/restapi/wrapper/ProductDetail.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="243" width="181" x="1723" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="36">    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="37" name="productService"/>      
+      <multiplicity id="38" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="39">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="40" name="orderService"/>      
+      <multiplicity id="41" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="42">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <generalization id="43">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <realization id="44">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
+  <generalization id="45">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <association id="46">    
+    <bendpoint x="3826" y="338"/>    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="47" name="productDao"/>      
+      <multiplicity id="48" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="49">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="50" name="productsToOrder"/>      
+      <multiplicity id="51" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="52">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="29"/>  
+  </nesting>  
+  <generalization id="53">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <association id="54">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="55" name="orderDetails"/>      
+      <multiplicity id="56" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="57">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="17"/>  
+  </realization>  
+  <generalization id="58">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="32"/>  
+  </generalization>  
+  <association id="59">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="60" name="customerDao"/>      
+      <multiplicity id="61" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="62">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="25"/>  
+  </nesting>  
+  <association id="63">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="64" name="orders"/>      
+      <multiplicity id="65" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="66">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <association id="67">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="68" name="allowedProducts"/>      
+      <multiplicity id="69" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="70">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="71" name="customers"/>      
+      <multiplicity id="72" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="73">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <association id="74">    
+    <bendpoint x="2827" y="338"/>    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="75" name="orderDao"/>      
+      <multiplicity id="76" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="77">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="78" name="products"/>      
+      <multiplicity id="79" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="80">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="81" name="order"/>      
+      <multiplicity id="82" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="83">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="32"/>  
+  </generalization>  
+  <nesting id="84">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="30"/>  
+  </nesting>  
+  <association id="85">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="86" name="customers"/>      
+      <multiplicity id="87" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="88">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="31"/>  
+  </nesting>  
+  <generalization id="89">    
+    <bendpoint x="3587" y="338"/>    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="32"/>  
+  </generalization>  
+  <generalization id="90">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="32"/>  
+  </generalization>  
+  <nesting id="91">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="26"/>  
+  </nesting>  
+  <realization id="92">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="19"/>  
+  </realization>  
+  <association id="93">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="94" name="customerService"/>      
+      <multiplicity id="95" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
